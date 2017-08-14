@@ -1,7 +1,7 @@
 version: '2'
 
 catalog:
-  name: Microsoft SQL Server
+  name: Microsoft SQL Server 2017
   version: RC2
   description: # Description of the versioned template of the Catalog Entry
   minimum_rancher_version: 1.0.1
