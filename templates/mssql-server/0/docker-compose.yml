@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  mssql:
+    image: "microsoft/mssql-server-linux"
+    ports:
+      - "1433"
+    environment:
+      SA_PASSWORD: '${SA_PASSWORD}'
+      ACCEPT_EULA: "Y"

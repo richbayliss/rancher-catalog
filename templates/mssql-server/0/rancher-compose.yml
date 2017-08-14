@@ -1,0 +1,14 @@
+version: '2'
+catalog:
+  name: Microsoft SQL Server
+  version: 1.0.0
+  description: # Description of the versioned template of the Catalog Entry
+  minimum_rancher_version: 1.0.1
+  maximum_rancher_version: # The maximum version of Rancher that supports the template, v1.0.1 and 1.0.1 are acceptable inputs
+  upgrade_from: # The previous versions that this template can be upgraded from
+  questions:
+  - variable: "SA_PASSWORD"
+    label: "SA Password"
+    type: "password"
+    required: true
+    description: "This is a SA account password to be used."

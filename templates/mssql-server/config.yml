@@ -1,0 +1,8 @@
+name: Microsoft SQL Server
+description: |
+  Microsoft SQL Server for Linux
+version: RC2
+category: Databases
+maintainer: Rich Bayliss
+license: Microsoft
+projectURL: https://hub.docker.com/r/microsoft/mssql-server-linux/
