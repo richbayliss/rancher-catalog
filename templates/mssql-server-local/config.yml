@@ -1,7 +1,7 @@
-name: Microsoft SQL Server 2017
+name: Microsoft SQL Server 2017 (Local Storage)
 description: |
-  Microsoft SQL Server 2017 for Linux
-version: RC2-Local
+  Microsoft SQL Server 2017 for Linux usig local disks for storage
+version: RC2
 category: Databases
 maintainer: Rich Bayliss
 license: Microsoft

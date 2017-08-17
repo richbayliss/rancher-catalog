@@ -2,7 +2,7 @@ version: '2'
 
 catalog:
   name: Microsoft SQL Server 2017
-  version: RC2-Local
+  version: RC2
   description: # Description of the versioned template of the Catalog Entry
   minimum_rancher_version: 1.0.1
   maximum_rancher_version: # The maximum version of Rancher that supports the template, v1.0.1 and 1.0.1 are acceptable inputs
@@ -13,6 +13,11 @@ catalog:
     type: "password"
     required: true
     description: "This is a SA account password to be used."
+  - variable: "VOLUME_DRIVER"
+    label: "Volume Driver"
+    type: "string"
+    default: "rancher-nfs"
+    description: "The storage driver to use."
 
 services:
   mssql-balancer:
