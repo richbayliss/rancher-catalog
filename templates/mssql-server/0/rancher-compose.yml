@@ -13,6 +13,13 @@ catalog:
     type: "password"
     required: true
     description: "This is a SA account password to be used."
+  - variable: "VOLUME_DRIVER"
+    label: "Volume Driver"
+    type: "enum"
+    options:
+    - local
+    - rancher-nfs
+    description: "The storage driver to use."
 
 services:
   mssql-balancer:
