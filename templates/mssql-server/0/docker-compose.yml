@@ -1,9 +1,8 @@
 version: "2"
 
 volumes:
-  mssql:
-    driver: ${VOLUME_DRIVER}
-    external: true
+  mssql-data:
+    driver: '${VOLUME_DRIVER}'
 
 services:
   mssql-balancer:
@@ -16,9 +15,9 @@ services:
       io.rancher.scheduler.global: 'true'
 
   mssql:
-    image: "microsoft/mssql-server-linux:rc2"
+    image: microsoft/mssql-server-linux:rc2
     volumes:
-      - mssql:/var/opt/mssql
+      - mssql-data:/var/opt/mssql
     environment:
       SA_PASSWORD: '${SA_PASSWORD}'
-      ACCEPT_EULA: "Y"
+      ACCEPT_EULA: 'Y'
