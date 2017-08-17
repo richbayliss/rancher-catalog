@@ -3,7 +3,7 @@ version: "2"
 volumes:
   mssql-data:
     external: true
-    driver: rancher-nfs
+    driver: '${VOLUME_DRIVER}'
 
 services:
   mssql-balancer:
@@ -17,7 +17,6 @@ services:
 
   mssql:
     image: microsoft/mssql-server-linux:rc2
-    volume-driver: '${VOLUME_DRIVER}'
     volumes:
       - mssql-data:/var/opt/mssql
     environment:
