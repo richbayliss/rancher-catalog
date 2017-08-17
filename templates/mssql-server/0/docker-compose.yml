@@ -17,6 +17,8 @@ services:
 
   mssql:
     image: "microsoft/mssql-server-linux:rc2"
+    volumes:
+      - mssql:/var/opt/mssql
     environment:
       SA_PASSWORD: '${SA_PASSWORD}'
       ACCEPT_EULA: "Y"
