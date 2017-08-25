@@ -1,0 +1,8 @@
+name: Visual Studio Team Services Build Agent
+description: |
+  Visual Studio Team Services Build Agent for Linux
+version: 2017
+category: Development
+maintainer: Rich Bayliss
+license: Microsoft
+projectURL: https://hub.docker.com/r/microsoft/vsts-agent/

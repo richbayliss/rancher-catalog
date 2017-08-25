@@ -1,0 +1,30 @@
+version: '2'
+
+catalog:
+  name: Visual Studio Team Services Build Agent
+  version: 2017
+  description: # Description of the versioned template of the Catalog Entry
+  minimum_rancher_version: 1.0.1
+  maximum_rancher_version: # The maximum version of Rancher that supports the template, v1.0.1 and 1.0.1 are acceptable inputs
+  upgrade_from: # The previous versions that this template can be upgraded from
+  questions:
+  - variable: "VSTS_ACCOUNT"
+    label: "Account"
+    type: "string"
+    default: ""
+    description: "The account name on Team Services"
+  - variable: "VSTS_POOL"
+    label: "Pool"
+    type: "string"
+    default: "Which pool to join"
+    description: ""
+  - variable: "VSTS_TOKEN"
+    label: "Token"
+    type: "string"
+    default: ""
+    description: "The access token required to join"
+
+services:
+  vsts-agent:
+    scale: 1
+    start_on_create: true

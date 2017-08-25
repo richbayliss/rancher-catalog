@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  vsts-agent:
+    image: microsoft/vsts-agent:ubuntu-16.04-docker-17.03.0-ce
+    environment:
+      VSTS_ACCOUNT: ${VSTS_ACCOUNT}
+      VSTS_POOL: ${VSTS_POOL}
+      VSTS_TOKEN: ${VSTS_TOKEN}
+    stdin_open: true
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    tty: true
+    labels:
+      io.rancher.container.pull_image: always
